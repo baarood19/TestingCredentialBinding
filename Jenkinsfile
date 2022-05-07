@@ -12,5 +12,4 @@ node
   println "${env.BINDCREDS_USR}"
   echo "${env.BINDCREDS_PSW}"
   
-  sh 'printenv'
 }
