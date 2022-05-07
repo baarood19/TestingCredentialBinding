@@ -4,12 +4,11 @@ node
   println "Hello World"
   checkout scm
   
-  withCredentials([string(credentialsId: 'BindCredentials', variable: 'TOKEN')]) {
+  withCredentials([string(credentialsId: 'BindCredentials',usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
     sh '''
       set +x
-      echo "$TOKEN"
+      echo "$USERNAME"
     '''
   }
-  
   
 }
