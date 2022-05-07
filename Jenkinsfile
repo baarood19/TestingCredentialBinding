@@ -1,15 +1,14 @@
-node
-{
-
-  println "Hello World"
-  checkout scm
-  environment{
-    BINDCREDS = credentials('BindCredentials')
-  }
-  echo "${env.BINDCREDS}"
-  println "${env.BINDCREDS}"
-  echo "${env.BINDCREDS_USR}"
-  println "${env.BINDCREDS_USR}"
-  echo "${env.BINDCREDS_PSW}"
-  
+pipeline {
+    agent any
+    stages {
+        stage('Example Username/Password') {
+            environment {
+                SERVICE_CREDS = credentials('BindingCredentials')
+            }
+            steps {
+                sh 'echo "Service user is $SERVICE_CREDS_USR"'
+                sh 'echo "Service password is $SERVICE_CREDS_PSW"'
+            }
+        }
+    }
 }
