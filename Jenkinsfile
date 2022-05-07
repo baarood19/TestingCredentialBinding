@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Example Username/Password') {
             environment {
-                SERVICE_CREDS = credentials('BindingCredentials')
+                SERVICE_CREDS = credentials('BindCredentials')
             }
             steps {
                 sh 'echo "Service user is $SERVICE_CREDS_USR"'
