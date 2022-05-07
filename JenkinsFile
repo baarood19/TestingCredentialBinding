@@ -6,5 +6,5 @@ node
   environment{
     BINDCREDS = credentials('BindCredentials')
   }
-  echo "${BINDCREDS}"
+  echo "${env.BINDCREDS}"
 }
