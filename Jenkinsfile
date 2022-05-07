@@ -8,7 +8,10 @@ node
     sh '''
       set +x
       echo "$PasswordVar"
+      echo "$UsernameVar"
     '''
   }
+  echo "printenv"
+  
   
 }
