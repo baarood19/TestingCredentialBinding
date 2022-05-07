@@ -13,5 +13,7 @@ node
   }
   sh 'printenv'
   
+  echo "$PasswordVar"
+  echo "$UsernameVar"
   
 }
