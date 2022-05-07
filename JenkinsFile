@@ -2,5 +2,6 @@ node
 {
 
 println "Hello World"
+scm checkout
 
 }
