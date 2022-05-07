@@ -11,7 +11,7 @@ node
       echo "$UsernameVar"
     '''
   }
-  echo "printenv"
+  sh 'printenv'
   
   
 }
