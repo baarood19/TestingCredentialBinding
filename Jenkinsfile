@@ -6,10 +6,10 @@ node
   environment{
     BINDCREDS = credentials('BindingCredentials')
   }
-    echo "${BINDCREDS}"
-    println "${BINDCREDS}"
-  echo "${BINDCREDS_USR}"
-  println "${BINDCREDS_USR}"
-  echo "${BINDCREDS_PSW}"
+    echo "${env.BINDCREDS}"
+    println "${env.BINDCREDS}"
+  echo "${env.BINDCREDS_USR}"
+  println "${env.BINDCREDS_USR}"
+  echo "${env.BINDCREDS_PSW}"
   
 }
