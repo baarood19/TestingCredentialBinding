@@ -4,16 +4,9 @@ node
   println "Hello World"
   checkout scm
   
- withCredentials([usernamePassword(credentialsId: 'BindCredentials', passwordVariable: 'PasswordVar', usernameVariable: 'UsernameVar')]) {
-    sh '''
-      set +x
-      echo "$PasswordVar"
-      echo "$UsernameVar"
-    '''
-  }
-  sh 'printenv'
-  
-  echo "$PasswordVar"
-  echo "$UsernameVar"
+ withCredentials([file(credentialsId: '30aa2f8d-7159-46ad-9d10-c6a2943bee91', variable: 'secretFile')]) {
+    env.SECRETFILE = secretFile
+}
+  echo " ${env.SECRETFILE}"
   
 }
