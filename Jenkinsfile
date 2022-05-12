@@ -9,6 +9,6 @@ node
 }
   echo " ${env.SECRETFILE}"
   
-  powershell " Copy-Item -Path ${env.SECRETFILE} -Destination {WORKSPACE} "
+  powershell " Copy-Item -Path ${env.SECRETFILE} -Destination ${WORKSPACE} "
   
 }
